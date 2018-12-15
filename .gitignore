@@ -1,0 +1,5 @@
+open_cmd_here.cmd
+node_modules
+**/out-tsc/
+**/summary.json
+.vscode
