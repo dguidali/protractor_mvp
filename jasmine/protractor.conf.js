@@ -4,7 +4,10 @@ exports.config = {
         './e2e/*.ts'
     ],
     capabilities: {
-        'browserName': 'chrome'
+        'browserName': 'chrome',
+        chromeOptions: {
+            args: [ "--headless" ]
+        }
     },
     directConnect: true,
     baseUrl: 'https://portal.uat.buhlergroup.io/',
