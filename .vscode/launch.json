@@ -6,13 +6,24 @@
     "configurations": [
 
         {
-            "name": "Launch",
+            "name": "Cucumber",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceRoot}",
             "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
             "stopOnEntry": false,
             "args": ["${workspaceRoot}/cucumber/protractor.conf.js", 
+                "--params.login.email=", 
+                "--params.login.password="],
+        },
+        {
+            "name": "Jasmine",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+            "stopOnEntry": false,
+            "args": ["${workspaceRoot}/jasmine/protractor.conf.js", 
                 "--params.login.email=", 
                 "--params.login.password="],
         }

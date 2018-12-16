@@ -6,4 +6,6 @@ Feature: Login
   Scenario: Login with username and password
     Given I am on the buhler insights platform login page
     When I have logged in with a valid username and password
-    Then I should be inside the buhler insights platform
+    Then I should be inside the platform
+    When I wait for five seconds and logout from the platform
+    Then I should be on the microsoft website

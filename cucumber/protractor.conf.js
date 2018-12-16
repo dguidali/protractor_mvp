@@ -21,7 +21,7 @@ exports.config = {
       './e2e/steps/**/*.ts',
       './e2e/features/support/*.ts'
     ],
-    strict: true,
+    strict: true, 
     format: [
       'json:cucumber/reports/summary.json'
     ],
@@ -37,10 +37,7 @@ exports.config = {
   },
 
   onPrepare() {
-    require('ts-node').register({
-      project: require('path').join(__dirname, './tsconfig.e2e.json')
-    });
-
+    require('ts-node/register');
     require('tsconfig-paths/register');
     browser.waitForAngularEnabled(false);
   }

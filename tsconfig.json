@@ -9,10 +9,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "module": "commonjs",
-    "types": [
-      "node"
-    ],
     "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "paths": {
       "@pages/*": ["page_objects/*"]
     }

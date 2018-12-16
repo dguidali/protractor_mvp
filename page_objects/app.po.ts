@@ -47,11 +47,17 @@ export class AppPage {
         return elementRef;
     }
 
-    public async logout() {
-        browser.waitForAngular()
-        await this.dropdownButton.click()
-        await this.logoutButton
-        await this.logoutButton.click()
-        return true;
+    public logout(): promise.Promise<boolean> {
+        const dropdownButton = this.dropdownButton;
+
+        return dropdownButton.click().then(() => {
+            const logoutButton = this.logoutButton;
+
+            return logoutButton.click().then(() => {
+                return true;
+            }).catch(() => {
+                return false;
+            });
+        });
     }
 }
