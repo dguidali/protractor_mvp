@@ -26,6 +26,7 @@
     "jasmine": "^3.3.1",
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-reporters": "^2.3.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0"
   }
 }

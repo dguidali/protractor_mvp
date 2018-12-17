@@ -17,7 +17,11 @@ exports.config = {
 
     mochaOpts: {
       reporter: 'spec',
-      timeout: 60000
+      timeout: 60000,
+      reporter: 'mocha-junit-reporter',
+      reporterOptions: {
+        mochaFile: 'mocha/reports/summary.xml'
+      }    
     },
 
     onPrepare() {
