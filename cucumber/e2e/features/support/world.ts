@@ -3,7 +3,7 @@ import * as cap from 'chai-as-promised'
 import * as chaiExpect from 'chai'
 
 function World(this: any, {attach, parameters} : any) {
-    setDefaultTimeout(60 * 10000);
+    setDefaultTimeout(60000);
     chaiExpect.use(cap)
     this.expect = chaiExpect.expect;
     this.attach = attach;

@@ -1,22 +1,26 @@
 exports.config = {
-    allScriptsTimeout: 11000,
-    specs: [
-        './e2e/*.ts'
-    ],
+    directConnect: true,
+    baseUrl: 'https://portal.uat.buhlergroup.io/',
+
     capabilities: {
         'browserName': 'chrome',
         chromeOptions: {
-            args: [ "--headless" ]
+            args: ["--headless"]
         }
     },
-    directConnect: true,
-    baseUrl: 'https://portal.uat.buhlergroup.io/',
+
+    specs: [
+        './e2e/*.ts'
+    ],
+
     framework: 'jasmine',
+
     jasmineNodeOpts: {
         showColors: true,
-        defaultTimeoutInterval: 30000,
+        defaultTimeoutInterval: 60000,
         print: function () { }
     },
+
     onPrepare() {
 
         const { SpecReporter } = require('jasmine-spec-reporter');
@@ -29,7 +33,7 @@ exports.config = {
             filePrefix: 'summary'
         }));
 
-        require('ts-node/register'); 
+        require('ts-node/register');
         require('tsconfig-paths/register');
         browser.waitForAngularEnabled(false);
     }

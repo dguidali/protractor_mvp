@@ -10,28 +10,20 @@ exports.config = {
     },
     specs:
       [
-        './e2e/features/*.feature'
+        './e2e/*.ts'
       ],
 
-    framework: 'custom',
-    frameworkPath: require.resolve('protractor-cucumber-framework'),
+    framework: 'mocha',
 
-    cucumberOpts: {
-      require: [
-        './e2e/steps/**/*.ts',
-        './e2e/features/support/*.ts'
-      ],
-      strict: true,
-      format: [
-        'json:cucumber/reports/summary.json'
-      ],
-      dryRun: false,
-      compiler: []
+    mochaOpts: {
+      reporter: 'spec',
+      timeout: 60000
     },
 
     onPrepare() {
       require('ts-node/register');
       require('tsconfig-paths/register');
+      
       browser.waitForAngularEnabled(false);
     }
 };
