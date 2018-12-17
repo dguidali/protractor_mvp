@@ -7,7 +7,7 @@ This repository contains automated testcases for the Bühler Insights platform b
 2. update webdriver manager:   
  `node node_modules\protractor\bin\webdriver-manager update --versions.gecko=v0.18.0`  
  
- The explicit gecko version is needed because of an issue with the selenium webdriver:  https://github.com/angular/webdriver-manager/issues/216
+   The explicit gecko version is needed because of an issue with the selenium webdriver:  https://github.com/angular/webdriver-manager/issues/216
 
 3. set username and password in  
 `launch.json`
