@@ -7,5 +7,5 @@ This repository contains automated testcases for the Bühler Insights platform b
 2. update webdriver manager:   
  `node node_modules\protractor\bin\webdriver-manager update --gecko=false`
 
-3. set username and password in 
+3. set username and password in  
 `launch.json`
