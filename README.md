@@ -3,5 +3,5 @@ This repository contains automated testcases for the Bühler Insights platform b
 
 ## To get started
 1. install node modules: npm install
-2. update webdriver manager: node node_modules\protractor\bin\webdriver-manager update
+2. update webdriver manager: node node_modules\protractor\bin\webdriver-manager update --gecko=false
 3. set username and password in launch.json
