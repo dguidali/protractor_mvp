@@ -22,7 +22,7 @@ exports.config = {
         const { SpecReporter } = require('jasmine-spec-reporter');
         jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
 
-        var jasmineReporters = require('jasmine-reporters');
+        const jasmineReporters = require('jasmine-reporters');
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
             consolidateAll: true,
             savePath: 'jasmine/reports',
